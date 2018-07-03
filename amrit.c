@@ -70,6 +70,71 @@ int dequeue1()
 		front1++;
 	return temp1;
 }
+void enqueue(int i)
+{
+	if(rear==10)
+		printf("overflow");
+	rear++;
+	q[rear]=i;
+	if(front==-1)
+		front=0;
+}
+
+int dequeue()
+{
+	if(front==-1)
+		printf("underflow");
+	int temp=q[front];
+	if(front==rear)
+		front=rear=-1;
+	else
+		front++;
+	return temp;
+}
+
+int isInQueue(int i)
+{
+	int k;
+	for(k=front;k<=rear;k++)
+	{
+		if(q[k]==i)
+			return 1;
+	}
+	return 0;
+}
+
+
+void enqueue1(int i)
+{
+	if(rear1==10)
+		printf("overflow");
+	rear1++;
+	q1[rear1]=i;
+	if(front1==-1)
+		front1=0;
+}
+
+int dequeue1()
+{
+	if(front1==-1)
+		printf("underflow");
+	int temp1=q1[front1];
+	if(front1==rear1)
+		front1=rear1=-1;
+	else
+		front1++;
+	return temp1;
+}
+
+int isInQueue1(int i)
+{
+	int k;
+	for(k=front1;k<=rear1;k++)
+	{
+		if(q1[k]==i)
+			return 1;
+	}
+	return 0;
 
 
 
