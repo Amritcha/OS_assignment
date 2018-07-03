@@ -71,49 +71,7 @@ int dequeue1()
 	return temp1;
 }
 
-int isInQueue1(int i)
-{
-	int k;
-	for(k=front1;k<=rear1;k++)
-	{
-		if(q1[k]==i)
-			return 1;
-	}
-	return 0;
-}
 
-
-
-void sortByArrival()
-{
-	struct process temp;
-	int i,j;
-	for(i=0;i<n-1;i++)
-		for(j=i+1;j<n;j++)
-		{
-			if(p[i].at>p[j].at)
-			{
-				temp=p[i];
-				p[i]=p[j];
-				p[j]=temp;
-			}
-		}
-}
-void sortByArrival1()
-{
-	struct process temp1;
-	int i,j;
-	for(i=0;i<n1-1;i++)
-		for(j=i+1;j<n1;j++)
-		{
-			if(p1[i].at>p1[j].at)
-			{
-				temp1=p1[i];
-				p1[i]=p1[j];
-				p1[j]=temp1;
-			}
-		}
-}
 
 
 
